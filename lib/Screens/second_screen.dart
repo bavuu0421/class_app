@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+  const SecondScreen({
+    Key? key,
+    required this.name,
+  }) : super(key: key);
+
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +16,10 @@ class SecondScreen extends StatelessWidget {
         color: Colors.amber,
         child: Center(
           child: ElevatedButton(
-            child: Text('go back'),
             onPressed: () {
               Navigator.pop(context);
             },
+            child: Text('Goodbye $name'),
           ),
         ),
       ),

@@ -17,8 +17,10 @@ class HomeScreen extends StatelessWidget {
             child: Text('Go to Second Screen'),
             onPressed: () {
               print('Hello');
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SecondScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SecondScreen(name: "Bob")));
             },
           ),
         ),
