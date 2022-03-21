@@ -9,6 +9,14 @@ class SecondScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         color: Colors.amber,
+        child: Center(
+          child: ElevatedButton(
+            child: Text('go back'),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
       ),
     );
   }
